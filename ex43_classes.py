@@ -22,11 +22,13 @@ list2 = []
 for group in [list[i:i+3] for i in range(0, len(list), 3)]:
     list2.append(group)
 
+del list2[0]
+
 dict = {}
 
 for group in list2:
     number, word, definition = group
-    dict[number] = {'latin': word, 'english': definition}
+    dict[int(number)] = {'latin': word, 'english': definition}
 
 class Scene(object):
 
